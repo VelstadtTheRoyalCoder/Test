@@ -14,6 +14,13 @@
  <h1> Das ist ein header </h1>
  <p> Das ist ein text paragraph mit einem <a href="https://store.steampowered.com/"> hyperlink </a> </p>
  <div id="mapid" style="width: 600px; height: 400px; position: relative;"></div>
+ <script>
+ 
+	var mymap = L.map('mapid').setView([48.524085106636065, 9.0558797941704810]).setZoom(15);
+	L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
+	var markBota = L.marker([48.523549, 9.057546]).addTo(mymap);
+	markBota.bindPopup("<p>This is the Botanical Garden</p>");
+</script>
 </body>
 
 </html>
